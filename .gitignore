@@ -216,3 +216,48 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ====================================================================
+# 🚀 华南师范大学金种子课题 - 三维重建与具身智能专项拦截规则
+# ====================================================================
+
+# 1. 拦截庞大的 3D 数据集（ShapeNet 无论是原文件、解压文件夹还是打包文件都不能传）
+data/
+datasets/
+ShapeNet/
+ModelNet/
+*.h5
+*.pickle
+*.pkl
+*.mat
+*.binvox
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# 2. 拦截深度学习模型权重文件（训练时每个 Epoch 存的权重，动辄几百MB，严禁上传）
+checkpoint/
+checkpoints/
+saved_models/
+weights/
+models_mp/
+*.pth
+*.ckpt
+*.pt
+*.onnx
+
+# 3. 拦截训练实验日志与可视化图表（TensorBoard 或本地生成的视角-精度关系曲线数据）
+runs/
+logs/
+output/
+outputs/
+results/
+*.log
+*.png
+*.jpg
+*.svg
+
+# 4. 具身智能 LeRobot 框架本地运行产生的临时缓存
+.cache/huggingface/
+.cache/lerobot/
